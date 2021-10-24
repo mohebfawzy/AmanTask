@@ -16,15 +16,15 @@ namespace AmanCompany.Models
     public partial class Product
     {
         public int Id { get; set; }
-        [Required, StringLength(100), Display(Name = "Name")]
+        
         public string Name { get; set; }
-        [Required, StringLength(500), Display(Name = "Name")]
+       
         public string Image { get; set; }
-        [Required, StringLength(100), Display(Name = "Product Type")]
+       
         public string Product_Type { get; set; }
-        [Required, StringLength(100), Display(Name = "Delivary Date")]
+       
         public Nullable<System.DateTime> DelivaryDate { get; set; }
-        [Required, StringLength(100), Display(Name = "Product Wright")]
+        
         public Nullable<double> ProductWeight { get; set; }
         public Nullable<double> price { get; set; }
         public Nullable<int> Quantity { get; set; }

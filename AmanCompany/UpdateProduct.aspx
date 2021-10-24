@@ -14,24 +14,24 @@
         <asp:FileUpload ID="FileUpload1" runat="server" />
 
         <br />
-        <label for="Image">Product Type</label>
+        <label>Product Type</label>
         <asp:TextBox ID="txtType" runat="server" CssClass="form-control" placeholder="Product Type" />
 
 
         <br />
         <label for="Image">Delivary Date</label>
-        <asp:TextBox ID="TxtDate" runat="server" CssClass="form-control" placeholder="Delivary Date" />
+        <asp:TextBox ID="TxtDate" type="date" runat="server" CssClass="form-control" placeholder="Delivary Date" />
 
         <br />
-        <label for="Image">Product Wieght </label>
+        <label >Product Wieght </label>
         <asp:TextBox ID="txtWieght" runat="server" CssClass="form-control" placeholder="Product Wieght" />
 
         <br />
-        <label for="Image">Product Price </label>
+        <label>Product Price </label>
         <asp:TextBox ID="TextPrice" runat="server" CssClass="form-control" placeholder="Product Price" />
 
         <br />
-        <label for="Image">Product Quantity </label>
+        <label>Product Quantity </label>
         <asp:TextBox ID="TextQuantity" runat="server" CssClass="form-control" placeholder="Product Quantity" />
 
         <br />
@@ -44,4 +44,17 @@
 
     <br />
     <br />
+     <script>
+    $(document).ready(function(){
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#MainContent_TxtDate').attr('min', today);
+
+    });
+     </script>
 </asp:Content>
+
